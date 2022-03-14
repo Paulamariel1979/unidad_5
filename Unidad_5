@@ -1,0 +1,31 @@
+
+# print(f " tu nombre es: {nombre} {apellido} {edad}")
+
+
+persona_lista = []
+
+
+def datos ():
+    nombre = input("Ingresa tu nombre: ")
+    apellido = input("Ingresa tu apellido: ")
+    edad = input ("Ingresa tu edad: ") 
+
+    persona ={ "nombre" : nombre, "apellido" : apellido, "edad" : edad}
+    persona_lista.append(persona)
+    return persona_lista
+print(datos())
+
+contador = 0
+
+while contador <3:
+    continuar = input ("Quieres agregar una persona?: Presiona 'Y' para sí o 'N' para salir.") 
+    if continuar == "y":
+        print(datos())
+    elif continuar == "n":
+        print("El programa terminó. ")  
+        break 
+    contador += 1 
+
+
+for persona in persona_lista:
+    print(f' tu nombre es: {persona ["nombre"]} {persona["apellido"]} {persona ["edad"]}')
